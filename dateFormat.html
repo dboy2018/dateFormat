@@ -1,0 +1,22 @@
+<script src="dateFormat.js"></script>
+<script>
+
+
+    
+
+    var d = new Date();
+
+    console.log(d.format("yyyy-MM-dd HH:mm:ss.fff EEEE EEE a Z ww1 w1 G GG GGG GGGG"));
+
+  
+    console.log(new Date().format("full"));
+    console.log(new Date().format("date"));
+    console.log(new Date().format("time"));
+    console.log(new Date().format("simple"));
+    console.log("2015-06-04T19:25:16.828696-07:00_____" + '2015-06-04T19:25:16.828696-07:00'.format("yyyy-MM-dd HH:mm:ss.fff EEEE EEE a Z ww1 w1 G GG GGG GGGG"));
+    console.log(angularJs.extract.format('2019-05-21T02:00:00', "yyyy-MM-dd HH:mm:ss.fff EEEE EEE a Z ww1 w1 G GG GGG GGGG"));
+    var b = 1280977330000;
+    console.log("1280977330000_____" + b.format("yyyy-MM-dd HH:mm:ss.fff EEEE EEE a Z ww1 w1 G GG GGG GGGG"));
+    console.log(angularJs.extract.format('2019-06-16', "yyyy-MM-dd HH:mm:ss.fff EEEE EEE a Z  ww7 w1 G GG GGG GGGG"));
+    console.log("aaa".format("yyyy-MM-dd HH:mm:ss.fff EEEE EEE a Z ww1 w1 G GG GGG GGGG"));
+</script>
