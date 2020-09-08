@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    <script src="node_modules/vue/dist/vue.js"></script>-->
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+    <script src="dateFormat.js"></script>
+</head>
+<body>
+<div id="app">
+    {{date|dateFormat("full")}}
+</div>
+</body>
+<script>
+    Vue.filter("dateFormat", function (value, formatStr) {
+        console.log(typeof value);
+        return value.format(formatStr);
+    });
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            date: new Date()
+        },
+        methods: {}
+    });
+</script>
+</html>
