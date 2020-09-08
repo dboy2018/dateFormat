@@ -416,12 +416,12 @@ angularJs.extract = new function () {
 
 
 }
-Date.prototype.format = function (formatstr, timezone) {
-    return angularJs.extract.format(this, formatstr, timezone);
+Date.prototype.format = function (formatStr, timeZone) {
+    return angularJs.extract.format(this, formatStr, timeZone);
 }
-String.prototype.format = function (formatstr, timezone) {
-    return angularJs.extract.format(this.toString(), formatstr, timezone);
+String.prototype.format = function (formatStr, timeZone) {
+    return angularJs.extract.format(this.toString(), formatStr, timeZone);
 }
-Number.prototype.format = function (formatstr, timezone) {
-    return angularJs.extract.format(Number(this), formatstr, timezone);
+Number.prototype.format = function (formatStr, timeZone) {
+    return angularJs.extract.format(Number(this), formatStr, timeZone);
 }
