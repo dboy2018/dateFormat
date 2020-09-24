@@ -341,7 +341,10 @@ angularJs.extract = new function () {
 
                 result = 1 + Math.round(diff / 6.048e8); // 6.048e8 ms per week
             } else {
-                result = 0 + Math.round(diff / 6.048e8); // 6.048e8 ms per week
+                var day1 = new Date(date.getFullYear(), date.getMonth() , date.getDate());
+                var day2 = new Date(date.getFullYear(), 0, 1);
+                var day = Math.round((day1.valueOf() - day2.valueOf()) / 86400000);
+                result= Math.ceil((day + ((day2.getDay() + 1) -1)) / 7)
             }
 
 
